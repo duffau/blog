@@ -1,6 +1,6 @@
 domain: duffau.github.io       
 url: https://duffau.github.io
-baseurl: /blog/ 
+baseurl: /blog/
 lsi: false
 safe: true
 source: .
