@@ -1,7 +1,8 @@
-# frozen_string_literal: true
-
 source "https://rubygems.org"
 
-# gem "rails"
-# gem "jekyll"
-gem "github-pages", "~> 226", group: :jekyll_plugins
+gem "github-pages", group: :jekyll_plugins
+gem "minima", "~> 2.5"
+group :jekyll_plugins do
+  gem 'jekyll-seo-tag'
+  gem "jekyll-feed", "~> 0.12"
+end

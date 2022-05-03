@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        {% include head.html %}
-    </head>
-    <body>
-        {% include navigation.html %}
-        {{ content }}
-        {% include scripts/mathjax.html %}
-    <pre id="jekyll-debug"></pre>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
-    <!-- Debugging -->
-    <!--
-    <script>
-        var obj = JSON.parse(decodeURIComponent("{{ site | jsonify | uri_escape }}"));
-        var prettyJson = JSON.stringify(obj, null, 4);  // Pretty-printed JSON (indented 4 spaces).
-        document.getElementById("jekyll-debug").textContent = prettyJson;
-    </script>
-    -->
-    </body>
+  {%- include head.html -%}
+
+  <body>
+
+    {%- include header.html -%}
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </main>
+
+    {%- include footer.html -%}
+    {%- include custom-scripts.html -%}
+
+  </body>
+
 </html>
