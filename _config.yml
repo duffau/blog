@@ -12,7 +12,7 @@ linkedin_username: christian-duffau-rasmussen
 theme: minima
 domain: duffau.github.io       
 url: https://duffau.github.io
-baseurl: /blog/
+baseurl: /blog
 
 lsi: false
 safe: true
@@ -24,8 +24,6 @@ highlighter: rouge
 gist:
   noscript: false
 
-plugins:
-  - jekyll-seo-tag
 
 kramdown:
   math_engine: mathjax
@@ -33,9 +31,14 @@ kramdown:
 
 exclude:
   - .venv/
+  - "**/__pycache__/"
+  - "*.pickle"
+  - "*.ods"
   - "*.py"
+  - "*.csv"
   - .jekyll-cache/
   - gemfiles/
+  - "**/pytest.ini"
   - Gemfile
   - Gemfile.lock
   - Makefile
